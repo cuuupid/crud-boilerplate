@@ -29,7 +29,7 @@ module.exports = {
     create: async (q, s) => {
         // Route Parameters
         const { name, email, password } = q.body
-        if (!email || !password) return s.status(401).send({ error: 'Missing fields' })
+        if (!email || !password || !name) return s.status(401).send({ error: 'Missing fields' })
 
         try {
             const hash = bcrypt.hashSync(password, 8) // hash the password
