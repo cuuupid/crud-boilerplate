@@ -7,7 +7,7 @@ const userSchema = new Schema({
     name: {
         type: String,
         trim: true,
-        default: 'No Name'
+        required: 'Please supply a name'
     },
     email: {
         type: String,
@@ -20,7 +20,7 @@ const userSchema = new Schema({
     password: { // (hashed)
         type: String,
         trim: false,
-        default: ''
+        required: 'Please supply a password'
     },
     // You don't need this.
     // You can calculate the created date based on Object ID
