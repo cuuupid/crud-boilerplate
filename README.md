@@ -40,7 +40,7 @@ Basic security is implemented - Helmet and SlowDown on the app, and JWT on the A
 - Path: `/status`
 
 Example:
-```
+``` bash
 curl --request GET \
   --url http://localhost:3000/v1/status
 ```
@@ -53,7 +53,7 @@ curl --request GET \
 - Path: `/signup`
 
 Example:
-```
+``` bash
 curl --request POST \
   --url http://localhost:3000/v1/signup \
   --header 'content-type: application/json' \
@@ -65,7 +65,7 @@ curl --request POST \
 ```
 
 Returns:
-```
+``` json
 {
     "success": true
 }
@@ -79,7 +79,7 @@ Returns:
 - Path: `/login`
 
 Example:
-```
+``` bash
 curl --request POST \
   --url http://localhost:3000/v1/login \
   --header 'content-type: application/json' \
@@ -90,7 +90,7 @@ curl --request POST \
 ```
 
 Returns:
-```
+``` json
 {
   "accessToken": "your token here"
 }
@@ -106,14 +106,14 @@ You can now use this token for further authenticated requests.
 - Path: `/me`
 
 Example:
-```
+``` bash
 curl --request POST \
   --url http://localhost:3000/v1/me \
   --header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZWRiNTBkMjk4ZTc5MDBjYTgxY2M1YyIsImlhdCI6MTU3NTg1OTU3MiwiZXhwIjoxNTc1OTQ1OTcyfQ.qu51CQ8GidBOk4W--AaKQ96-Fv1XjQ6HXXAcbi2SEBk'
 ```
 
 Returns:
-```
+``` json
 {
   "_id": "5dedb91b298e7900ca81cc5e",
   "email": "example1@example.com",
@@ -130,7 +130,7 @@ Returns:
 - Path: `/update`
 
 Example:
-```
+``` bash
 curl --request POST \
   --url http://localhost:3000/v1/update \
   --header 'content-type: application/json' \
@@ -142,7 +142,7 @@ curl --request POST \
 ```
 
 Returns:
-```
+``` json
 {
   "_id": "5dedb91b298e7900ca81cc5e",
   "email": "example2@example.com",
@@ -161,7 +161,7 @@ Returns:
 **Caution: this is permanent!**
 
 Example:
-```
+``` bash
 curl --request POST \
   --url http://localhost:3000/v1/delete \
   --header 'content-type: application/json' \
@@ -173,7 +173,7 @@ curl --request POST \
 ```
 
 Returns:
-```
+``` json
 {
   "success": true
 }
