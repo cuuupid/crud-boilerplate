@@ -3,7 +3,9 @@
 A basic CRUD Express+Mongo stack API.
 
 **Routes** - `routes/`
+
 **DB Schemas/Models** - `models/`
+
 **Entrypoint** - `app.js`
 
 Users have a basic model - email, password, and a name. Passwords are hashed with BCrypt.
@@ -32,10 +34,10 @@ Basic security is implemented - Helmet and SlowDown on the app, and JWT on the A
 ## Endpoints
 
 ### Status
-Method: `GET`
-Params: none
-Headers: none
-Path: `/status`
+- Method: `GET`
+- Params: none
+- Headers: none
+- Path: `/status`
 
 Example:
 ```
@@ -44,11 +46,11 @@ curl --request GET \
 ```
 
 ### Create
-Method: `POST`
-Params: email, password, name (in JSON)
-Headers:
-`Content-Type: application/json`
-Path: `/signup`
+- Method: `POST`
+- Params: email, password, name (in JSON)
+- Headers:
+    - `Content-Type: application/json`
+- Path: `/signup`
 
 Example:
 ```
@@ -70,11 +72,11 @@ Returns:
 ```
 
 ### Auth
-Method: `POST`
-Params: email, password (in JSON)
-Headers:
-`Content-Type: application/json`
-Path: `/login`
+- Method: `POST`
+- Params: email, password (in JSON)
+- Headers:
+    - `Content-Type: application/json`
+- Path: `/login`
 
 Example:
 ```
@@ -96,12 +98,12 @@ Returns:
 You can now use this token for further authenticated requests.
 
 ### Read
-Method: `POST`
-Params: none
-Headers:
-`Content-Type: application/json`
-`x-access-token: your token here`
-Path: `/me`
+- Method: `POST`
+- Params: none
+- Headers:
+    - `Content-Type: application/json`
+    - `x-access-token: your token here`
+- Path: `/me`
 
 Example:
 ```
@@ -120,12 +122,12 @@ Returns:
 ```
 
 ### Update
-Method: `POST`
-Params: name, email (in JSON) (all optional)
-Headers:
-`Content-Type: application/json`
-`x-access-token: your token here`
-Path: `/update`
+- Method: `POST`
+- Params: name, email (in JSON) (all optional)
+- Headers:
+    - `Content-Type: application/json`
+    - `x-access-token: your token here`
+- Path: `/update`
 
 Example:
 ```
@@ -149,12 +151,12 @@ Returns:
 ```
 
 ### Delete
-Method: `POST`
-Params: email, password (in JSON)
-Headers:
-`Content-Type: application/json`
-`x-access-token: your token here`
-Path: `/delete`
+- Method: `POST`
+- Params: email, password (in JSON)
+- Headers:
+    - `Content-Type: application/json`
+    - `x-access-token: your token here`
+- Path: `/delete`
 
 **Caution: this is permanent!**
 
